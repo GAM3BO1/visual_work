@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_DataType3.html</title>
+</head>
+<body>
+    <h1>javascript 데이터 type</h1>
+    <p> <strong>object</strong> type</p>
+    <script>
+        /*
+            한명의 회원정보를 다루고자 한다
+            이름, 번호, 성별
+        */
+
+        // 번호는 1이고, 이름은 홍길동이고, 성별은 남자인 회원의 정보를 변수 3개에 각각 저장
+        let num = 1;
+        let name = "홍길동";
+        let isMale = true;
+
+        //하나의 변수명으로 여러 개의 값을 한번에 관리하는 방법 (object type)
+        let mem1 = {num: 1, name: "홍길동", isMale: true};
+
+        let mem2 = {
+            num: 1,
+            name: "홍길동",
+            isMale: true
+        };
+
+        //object의 특정 방(key)에 넣을 데이터를 변수명으로 불러와서 넣을 수도 있음
+        let mem3 = {num: num, name: name, isMale: isMale};
+        //위를 줄여서 아래와 같이 object를 만들 수도 있음
+        let mem4 = {num, name, isMale};
+
+        //a는 object type
+        let a = mem1; //mem1에 있는 object type 값을 a에 복사
+        //b는 number type
+        let b = mem1.num;
+        //c는 string type
+        let c = mem1.name;
+        //d는 boolean type
+        let d = mem1.isMale;
+
+        //빈 obejct를 만들고 나중에 필요에 따라서 데이터를 추가할 수 있음
+        let mem5 = {};
+        mem5.num2 = 2;
+        mem5.name = "영희";
+        mem5.isMale = false;
+
+        //이미 만들어져 있는 object에 저장된 값 수정하기
+        mem2.num = 3;
+        mem2.name = "고양이";
+    </script>
+</body>
+</html>

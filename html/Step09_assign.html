@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_Assignment</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        .container{
+            width: 768px;
+            /* 위, 아래 마진은 0 / 좌, 우 마진은 auto */
+            margin: 0 auto;
+        }
+        .card{
+            float: left;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            margin: 5px;
+        }
+        /* 
+            선택자에서 한칸 띄우기는 자손 선택자
+            class 속성의 값이 card인 요소의 자손 중에서 img 요소를 선택
+        */
+        .card img{
+            max-width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>계정 공유 구독</h2>
+        <fieldset>
+            <legend>정보 입력</legend>
+
+            <label for="nickname">닉네임</label>
+            <input type="text" id="nickname" name="nickname"><br>
+
+            <label for="email">이메일</label>
+            <input type="text" id="email" name="email"><br>
+
+            성별
+            <label>
+                <input type="radio" name="gender" value="man" checked> 남자
+            </label>
+            <label>
+                <input type="radio" name="gender" value="woman"> 여자
+            </label>
+            <br>
+
+            생년월일
+            <input type="date" name="date">
+            <br>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>구독할 OTT</legend>
+            
+            <div class="card">
+                <h3>Netflix</h3>
+                <p>
+                    <a href="https://www.netflix.com/kr/" title="netflix 홈페이지로 이동">
+                        <img src="logo/netflix_logo.png"><br>
+                    </a>    
+                    <label for="price">요금제 선택</label><br>
+                    <select name="price" id="price">
+                        <option value="">선택</option>
+                        <option value="ad_basic">광고형 베이직</option>
+                        <option value="basic">베이직</option>
+                        <option value="standard">스탠다드</option>
+                        <option value="premium">프리미엄</option>
+                    </select>
+                    <br>
+                    <label for="price">개월 수 선택</label><br>
+                    <select name="month" id="price">
+                        <input type="number" name="month" min="1" max="12" step="1"><br>
+                    </select>                    
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3>tving</h3>
+                <p>
+                    <a href="https://www.tving.com/onboarding" title="tving 홈페이지로 이동">
+                        <img src="logo/tving_logo.jpg"><br>
+                    </a>
+                    <label for="price">요금제 선택</label><br>
+                    <select name="price" id="price">
+                        <option value="">선택</option>
+                        <option value="ad_basic">광고형 베이직</option>
+                        <option value="basic">베이직</option>
+                        <option value="standard">스탠다드</option>
+                        <option value="premium">프리미엄</option>
+                    </select>
+                    <br>
+                    <label for="price">개월 수 선택</label><br>
+                    <select name="month" id="price">
+                        <input type="number" name="month" min="1" max="12" step="1"><br>
+                    </select>
+                </p>
+            </div>  
+            <div class="card">
+                <h3>wavve</h3>
+                <p>
+                    <a href="https://www.wavve.com" title="wavve 홈페이지로 이동">
+                        <img src="logo/wavve_logo.png"><br>
+                    </a>
+                    <label for="price">요금제 선택</label><br>
+                    <select name="price" id="price">
+                        <option value="">선택</option>
+                        <option value="ad_basic">광고형 베이직</option>
+                        <option value="basic">베이직</option>
+                        <option value="standard">스탠다드</option>
+                        <option value="premium">프리미엄</option>
+                    </select>
+                    <br>
+                    <label for="price">개월 수 선택</label><br>
+                    <select name="month" id="price">
+                        <input type="number" name="month" min="1" max="12" step="1"><br>
+                    </select>
+                </p>
+            </div>   
+        </fieldset>
+        <br>
+        <button type="submit">제출</button>
+    </div>
+</body>
+</html>

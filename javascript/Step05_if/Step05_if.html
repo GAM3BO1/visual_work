@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_if.html</title>
+</head>
+<body>
+    <h1>조건부로 실행되는 code 블럭 구성하기</h1>
+    <p id="one"></p>
+    <p id="two"></p>
+    <script>
+        let name = prompt("이름을 입력하세용");
+
+        // 만약 입력한 이름이 "홍길동"이면 위의 p 요소에 "반갑습니당" 이라고 출력되도록 프로그래밍
+        if(name == "홍길동"){
+            document.querySelector("#one").innerText = name + "님 반갑습니당~!";
+        }
+
+        /*
+            비교하는 code가 복잡한 경우, 따로 비교를 해서 결과를 얻어내서
+            결과값을 if 문 안에서 사용 가능
+        */
+        let isEqual = (name == "홍길동");
+        if(isEqual){
+            document.querySelector("#one").innerText = name + "님 반갑습니당~!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_document2.html</title>
+    <style>
+        p{
+            color: skyblue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            cursor: pointer;
+            transition: margin-left 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>인라인 css 테스트</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, corrupti repellat! Minima, quia ratione aperiam accusamus delectus ad similique cumque, esse voluptate quisquam, dolore laboriosam nesciunt voluptas. Iure, enim eligendi.</p>
+    <div class="box" onclick="move()">눌러보세용</div>
+    
+    <script>
+        // document.querySelector("p").style.backgroundColor = "grey";
+        // box div를 클릭하면 우측으로 100px 이동하도록 프로그래밍
+        let move = () => {document.querySelector(".box").style.marginLeft = "100px"};
+    </script>
+</body>
+</html>

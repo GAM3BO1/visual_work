@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_document.html</title>
+</head>
+<body>
+    <h1>document object 사용해보기</h1>
+    <button onclick="h1Change()">바꾸기</button>
+    <p id="one" onmouseover="p1Change()">p1</p>
+    <p class="my-class">p2</p>
+    <p class="my-class">p3</p>
+    <input type="text" id="two">
+    <button onclick="send()">전송 &rarr; </button>
+    <input type="text" id="three">
+    <script>
+        //h1 요소의 innerText를 특정 버튼(바꾸기)을 눌렀을 때 바꾸고 싶음
+        let h1Change = () => {document.querySelector("h1").innerText = "뿅"};
+        //p1 에 mouseover가 되었을 때 innerText를 "마우스가 올라왔어요"라고 변경되도록 프로그래밍
+        let p1Change = () => {document.querySelector("p").innerText = "마우스가 올라왔어용"};
+
+        let send = () => {
+            // 1. 첫번째 input 요소에 입력한 value를 읽어옴
+            // 2. 위에서 읽어온 value 값을 두번째 input 요소의 value값으로 넣어줌
+            // document.querySelector("#three").value = document.querySelector("#two").value;
+            let value1 = document.querySelector("#two").value;
+            document.querySelector("#three").value = value1;
+        };
+
+        /* 또 다른 방법
+        //페이지 로딩 시점에 참조값을 받아오기
+        let input1 = document.querySelector("#two");
+        let input2 = document.querySelector("#three");
+        
+        let send = () => {input2.value = inpu1.value;}
+        */
+    </script>
+</body>
+</html>

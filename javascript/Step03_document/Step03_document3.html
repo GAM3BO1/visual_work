@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_document3.html</title>
+    <style>
+        p{
+            color: skyblue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            cursor: pointer;
+            transition: margin-left 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>인라인 css 테스트</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, corrupti repellat! Minima, quia ratione aperiam accusamus delectus ad similique cumque, esse voluptate quisquam, dolore laboriosam nesciunt voluptas. Iure, enim eligendi.</p>
+    <button onclick="reset()">reset</button>
+    <div class="box" onclick="move()">눌러보세용</div>
+    <script>
+        /*
+            box div를 클릭하면 우측으로 100px 이동하도록 프로그래밍
+        */
+        
+        //함수 안에서 사용할 변수를 페이지 로딩 시점에 미리 초기값을 대입해서 만들어 둔다
+        //여기서는 초기값 필요(why...연산을 해야하는데 초기값이 없으면 연산 안됨)
+        let mLeft = 0;
+        let move = () => {
+            //global 영역에 선언된 변수 사용 가능
+            mLeft += 100;
+            console.log(mLeft);
+            document.querySelector(".box").innerText = mLeft + "px 갔어용";
+            document.querySelector(".box").style.marginLeft = mLeft + "px";
+        };
+
+        let reset = () => {
+            mLeft = 0;
+            document.querySelector(".box").style.marginLeft = mLeft + "px";
+            document.querySelector(".box").innerText = "태초마을(0px)";
+        }
+    </script>
+</body>
+</html>

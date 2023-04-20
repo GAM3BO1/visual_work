@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Basic.html</title>
+    <style>
+        /*
+            css 영역에서의 주석
+        */
+        button{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        여기는 html 영역에서의 주석
+        영역 선택 후 crtl + / 하면 해당 영역 주석 가능
+    -->
+    <h1>여기는 제목 입니다</h1>
+    <p>안녕하세요 이제 시작 이군요</p>
+    <!--onclick " "안: button에 click 이벤트가 발생할 때마다 실행되는 javascript 영역-->
+    <button onclick="sayHi()">인사하기</button> 
+    <script>
+        //페이지 로딩 시점에 딱 한번 실행(해석)되는 javascript 영역
+
+        //한 줄 주석
+        
+        /*
+            여러 줄 주석
+            javascript의 여러줄 주석은 css 영역에서의 주석과 동일
+        */
+
+        function sayHi(){
+            alert("안녕하세요!"); //sayHi라는 함수가 call(호출) 할 때마다 실행(해석)되는 javascript 영역
+        }
+
+    </script>
+</body>
+</html>
