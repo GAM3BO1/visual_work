@@ -35,4 +35,6 @@ my visual_work
     - loop
     - if
     - event
+    - createElement
+    - array
 </div>
