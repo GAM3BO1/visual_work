@@ -1,5 +1,4 @@
 # visual_work
-my visual_work
 
 <div align=center>
 	<p>✨ Studying ✨</p>
